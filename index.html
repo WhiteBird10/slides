@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Финансовая математика</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/blood.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="center" style="font-size: 81%;">
+					<h1>Финансовая матиматика</h1>
+				</section>
+				<section class="center">
+					<h2>Определение</h2>
+				</section>
+				<section data-markdown="markdown/fm.md"></section>
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### Формулы наращения. Простые проценты
+
+							Формула наращения: $S=P(1+ni)$
+
+							Формула дисконтирования:
+							$
+							P=\dfrac{S}{1+ni}
+							$
+
+							Обозначения:  
+							- $S$ - наращенная функция 
+							- $P$ - изначальная сумма
+							- $n$ - срок хранения
+							- $i$ - ставка в годовых
+
+						</script>
+					</section>		
+				</section>
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### Формулы наращения. Сложные проценты
+
+							Формула наращения: $S=P(1+i)^n$
+
+							Формула дисконтирования:
+							$
+							P=S(1-d)^n
+							$
+
+							Обозначения:  
+							- $S$ - наращенная функция 
+							- $P$ - изначальная сумма
+							- $n$ - срок хранения
+							- $d$ - годовая учетная ставка ($0$<$d$<$1$)
+
+						</script>
+					</section>		
+				</section>
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### 3 Практики начисления процентов
+
+							1. Германская - приблизительное число дней и финансовый год. 
+
+							$n=\dfrac{360}{360}$	
+						</script>
+					</section>		
+				</section>
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### 3 Практики начисления процентов
+
+							2. Французская - точное число дней проведения операции и финансовый год.
+							
+							$n=\dfrac{365}{360}$
+						</script>
+					</section>		
+				</section>
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### 3 Практики начисления процентов
+
+							3. Английская - точное число дней проведения операции и фактическое количество дней в году.
+							
+							$n=\dfrac{365}{365}$ или $n=\dfrac{365}{366}$
+						</script>
+					</section>		
+				</section>
+
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### Примеры. Германский подход
+
+							$P$ = 1000 руб.
+
+							$i$ = 8%
+
+							$K$= с 1 февраля по 31 мая
+
+							S = 1000*(1+0.08*$\dfrac{120}{360}$) = 1026.67
+						</script>
+					</section>		
+				</section>
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### Примеры. Французский подход
+
+							$P$ = 1000 руб.
+
+							$i$ = 8%
+
+							$K$= с 1 февраля по 31 мая
+
+							S = 1000*(1+0.08*$\dfrac{119}{360}$) = 1026.44
+						</script>
+					</section>		
+				</section>
+				<section>
+					<section data-markdown style="font-size: 81%;">
+						<script type="text/template">
+							### Примеры. Английский подход
+
+							$P$ = 1000 руб.
+
+							$i$ = 8%
+
+							$K$= с 1 февраля по 31 мая (високосный год)
+
+							S = 1000*(1+0.08*$\dfrac{120}{366}$) = 1026.23
+						</script>
+					</section>		
+				</section>
+				
+				
+				<section class="center">
+					<h2>Графики</h2>
+				</section>
+					<section data-markdown="markdown/line_chart.md"></section>
+					<section data-markdown="markdown/candlestick.md"></section>
+					<section data-fullscreen>
+						<iframe data-src="html/candlestick.html"
+						class="stretch"></iframe>
+					</section>
+					<section class="center">
+						<h2>Юмор</h2>
+						<!-- Высокое качество-->
+						<section data-background-image="html/img/bez.png" data-background-size="contain"></section>
+						<!-- Вертикальная-->
+						<section data-background-image="html/img/max.jpg" data-background-size="contain"></section>
+						<!-- Низкого качество-->
+						<section><img src="html/img/images.jfif"></section>
+					</section>
+					<section class="center" data-menu-title="Заключительный">
+						Спасибо за внимание!!!
+					</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				center: false,
+				slideNumber: true,
+				controls:true,
+				dependencies:[
+					{
+						src:'plugin/menu/menu.js'
+					},
+					{
+						src:'plugin/fullscreen/fullscreen.js'
+					},
+					{
+						src:'plugin/katex/katex.js',
+						async:true,
+					},
+				],
+
+			menu: {
+				numbers: true,
+				markers: true,
+			},
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
