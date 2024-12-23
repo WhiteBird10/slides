@@ -290,7 +290,7 @@
 					color: #555;
 					}
 
-					input[type="number"] {
+					input[type="number1"] {
 					width: 100%;
 					padding: 10px;
 					border-radius: 5px;
@@ -351,25 +351,25 @@
 					<form id="loan-form1">
 					<label>Сумма кредита:</label>
 					<input
-						type="number"
-						id="amount"
+						type="number1"
+						id="amount1"
 						placeholder="Введите сумму кредита"
 						required
 					/>
 
 					<label >Процентная ставка:</label>
 					<input
-						type="number"
+						type="number1"
 						step="0.01"
-						id="interest"
+						id="interest1"
 						placeholder="Введите процентную ставку"
 						required
 					/>
 
 					<label>Срок погашения:</label>
 					<input
-						type="number"
-						id="days"
+						type="number1"
+						id="days1"
 						placeholder="Введите срок погашения в днях"
 						required
 					/>
@@ -408,7 +408,7 @@
 					color: #555;
 					}
 
-					input[type="number"] {
+					input[type="number2"] {
 					width: 100%;
 					padding: 10px;
 					border-radius: 5px;
@@ -469,25 +469,25 @@
 					<form id="loan-form2">
 					<label>Сумма кредита:</label>
 					<input
-						type="number"
-						id="amount"
+						type="number2"
+						id="amount2"
 						placeholder="Введите сумму кредита"
 						required
 					/>
 
 					<label >Процентная ставка:</label>
 					<input
-						type="number"
+						type="number2"
 						step="0.01"
-						id="interest"
+						id="interest2"
 						placeholder="Введите процентную ставку"
 						required
 					/>
 
 					<label>Срок погашения:</label>
 					<input
-						type="number"
-						id="days"
+						type="number2"
+						id="days2"
 						placeholder="Введите срок погашения в днях"
 						required
 					/>
@@ -594,9 +594,9 @@
 			// Функция для расчета ежемесячного платежа
 				function calculatePayment1() {
 				// Получаем входные значения
-				var amount = document.getElementById("amount").value;
-				var interest = document.getElementById("interest").value;
-				var days = document.getElementById("days").value;
+				var amount = document.getElementById("amount1").value;
+				var interest = document.getElementById("interest1").value;
+				var days = document.getElementById("days1").value;
 
 				// Рассчитываем ежемесячную процентную ставку и количество платежей
 				var monthlyInterest = interest / 100 ;
@@ -642,9 +642,9 @@
 			// Функция для расчета ежемесячного платежа
 				function calculatePayment2() {
 				// Получаем входные значения
-				var amount = document.getElementById("amount").value;
-				var interest = document.getElementById("interest").value;
-				var days = document.getElementById("days").value;
+				var amount = document.getElementById("amount2").value;
+				var interest = document.getElementById("interest2").value;
+				var days = document.getElementById("days2").value;
 
 				// Рассчитываем ежемесячную процентную ставку и количество платежей
 				var monthlyInterest = interest / 100 ;
